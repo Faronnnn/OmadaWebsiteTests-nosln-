@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Resources;
 using System.Text;
-using NUnit.Framework.Internal;
 using OmadaWebsiteTests.PageObjects.Base;
 using OmadaWebsiteTests.PageObjects.More.Career;
 using OmadaWebsiteTests.PageObjects.Solutions;

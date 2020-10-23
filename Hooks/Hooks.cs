@@ -45,7 +45,7 @@ namespace OmadaWebsiteTests.Hooks
             IDictionary environmentVariables = Environment.GetEnvironmentVariables();
 
             
-            switch (value)
+            switch (envVariable)
             {
                 case "Chrome": return new ChromeDriver(); //{ Url = SeleniumBaseUrl };
                 case "Firefox": return new FirefoxDriver(); //{ Url = SeleniumBaseUrl };

@@ -1,5 +1,4 @@
 C:\Users\Bartek\source\repos\OmadaWebsiteTests\OmadaWebsiteTests\bin\Debug\netcoreapp3.1\testhost.dll
-C:\Users\Bartek\source\repos\OmadaWebsiteTests\OmadaWebsiteTests\bin\Debug\netcoreapp3.1\TechTalk.SpecFlow.NUnit.SpecFlowPlugin.dll
 C:\Users\Bartek\source\repos\OmadaWebsiteTests\OmadaWebsiteTests\bin\Debug\netcoreapp3.1\testhost.exe
 C:\Users\Bartek\source\repos\OmadaWebsiteTests\OmadaWebsiteTests\bin\Debug\netcoreapp3.1\OmadaWebsiteTests.deps.json
 C:\Users\Bartek\source\repos\OmadaWebsiteTests\OmadaWebsiteTests\bin\Debug\netcoreapp3.1\OmadaWebsiteTests.runtimeconfig.json
@@ -19,7 +18,6 @@ C:\Users\Bartek\source\repos\OmadaWebsiteTests\OmadaWebsiteTests\bin\Debug\netco
 C:\Users\Bartek\source\repos\OmadaWebsiteTests\OmadaWebsiteTests\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.TestPlatform.Common.dll
 C:\Users\Bartek\source\repos\OmadaWebsiteTests\OmadaWebsiteTests\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 C:\Users\Bartek\source\repos\OmadaWebsiteTests\OmadaWebsiteTests\bin\Debug\netcoreapp3.1\NuGet.Frameworks.dll
-C:\Users\Bartek\source\repos\OmadaWebsiteTests\OmadaWebsiteTests\bin\Debug\netcoreapp3.1\nunit.framework.dll
 C:\Users\Bartek\source\repos\OmadaWebsiteTests\OmadaWebsiteTests\bin\Debug\netcoreapp3.1\TechTalk.SpecFlow.dll
 C:\Users\Bartek\source\repos\OmadaWebsiteTests\OmadaWebsiteTests\bin\Debug\netcoreapp3.1\LivingDoc.Dtos.dll
 C:\Users\Bartek\source\repos\OmadaWebsiteTests\OmadaWebsiteTests\bin\Debug\netcoreapp3.1\LivingDoc.SpecFlowPlugin.dll

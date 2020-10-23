@@ -8,9 +8,9 @@ using OmadaWebsiteTests.PageObjects.Solutions.SolutionOverview;
 using OmadaWebsiteTests.PageObjects.More.Company;
 using OmadaWebsiteTests.PageObjects.More.Career;
 using TechTalk.SpecFlow.Assist;
-using NUnit.Framework;
 using System.Threading;
 using OmadaWebsiteTests.PageObjects.External;
+using FluentAssertions;
 
 namespace OmadaWebsiteTests.Features
 {
@@ -62,12 +62,13 @@ namespace OmadaWebsiteTests.Features
         [Then(@"all fields of contact form are filled")]
         public void ThenAllFieldsOfContactFormAreFilled()
         {
-            Assert.IsTrue(_contactForm.GetFirstNameFieldValue() != "");
-            Assert.IsTrue(_contactForm.GetLastNameFieldValue() != "");
-            Assert.IsTrue(_contactForm.GetCompanyFieldValue() != "");
-            Assert.IsTrue(_contactForm.GetJobTitleFieldValue() != "");
-            Assert.IsTrue(_contactForm.GetEmailFieldValue() != "");
-            Assert.IsTrue(_contactForm.GetPhoneFieldValue() != "");
+            _contactForm.GetFirstNameFieldValue().Should().NotBeNullOrEmpty();
+            //Assert.IsTrue(_contactForm.GetFirstNameFieldValue() != "");
+            //Assert.IsTrue(_contactForm.GetLastNameFieldValue() != "");
+            //Assert.IsTrue(_contactForm.GetCompanyFieldValue() != "");
+            //Assert.IsTrue(_contactForm.GetJobTitleFieldValue() != "");
+            //Assert.IsTrue(_contactForm.GetEmailFieldValue() != "");
+            //Assert.IsTrue(_contactForm.GetPhoneFieldValue() != "");
             //Assert.IsTrue(_contactForm.GetSubjectFieldValue() != ""); // Subject field doesn't accept values
         }
 
@@ -93,7 +94,8 @@ namespace OmadaWebsiteTests.Features
         [Then(@"I see '(.*)' in the results")]
         public void ThenISeeInTheResults(string jobTitle)
         {
-            Assert.IsTrue(_careerPortal.CheckIfJobOfferExist(jobTitle));
+            _careerPortal.CheckIfJobOfferExist(jobTitle).Should().BeTrue();
+            //Assert.IsTrue(_careerPortal.CheckIfJobOfferExist(jobTitle));
         }
 
         [When(@"I open Contact Omada page from main page")]
@@ -106,7 +108,8 @@ namespace OmadaWebsiteTests.Features
         public void ThenAddressOfPolishBranchIsCorrect()
         {
             string polishAddress = "Omada | Postępu 17A | 02-676 Warszawa";
-            Assert.IsTrue(_contactPage.SearchForAnAddress(polishAddress));
+            _contactPage.SearchForAnAddress(polishAddress).Should().BeTrue();
+            //Assert.IsTrue(_contactPage.SearchForAnAddress(polishAddress));
         }
 
         [When(@"I Open Omada Identity Suite - Solution Overview from Resuources section in Main Menu")]
