@@ -19,8 +19,7 @@ namespace OmadaWebsiteTests.Features
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.4.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("OmadaWebsiteTests")]
+    [TechTalk.SpecRun.FeatureAttribute("OmadaWebsiteTests", Description="\tExample of tests testing Omada Website responsiveness", SourceFile="Features\\OmadaSite.feature", SourceLine=0)]
     public partial class OmadaWebsiteTestsFeature
     {
         
@@ -31,7 +30,7 @@ namespace OmadaWebsiteTests.Features
 #line 1 "OmadaSite.feature"
 #line hidden
         
-        [NUnit.Framework.OneTimeSetUpAttribute()]
+        [TechTalk.SpecRun.FeatureInitialize()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
@@ -39,19 +38,18 @@ namespace OmadaWebsiteTests.Features
             testRunner.OnFeatureStart(featureInfo);
         }
         
-        [NUnit.Framework.OneTimeTearDownAttribute()]
+        [TechTalk.SpecRun.FeatureCleanup()]
         public virtual void FeatureTearDown()
         {
             testRunner.OnFeatureEnd();
             testRunner = null;
         }
         
-        [NUnit.Framework.SetUpAttribute()]
         public virtual void TestInitialize()
         {
         }
         
-        [NUnit.Framework.TearDownAttribute()]
+        [TechTalk.SpecRun.ScenarioCleanup()]
         public virtual void TestTearDown()
         {
             testRunner.OnScenarioEnd();
@@ -60,7 +58,6 @@ namespace OmadaWebsiteTests.Features
         public virtual void ScenarioInitialize(TechTalk.SpecFlow.ScenarioInfo scenarioInfo)
         {
             testRunner.OnScenarioInitialize(scenarioInfo);
-            testRunner.ScenarioContext.ScenarioContainer.RegisterInstanceAs<NUnit.Framework.TestContext>(NUnit.Framework.TestContext.CurrentContext);
         }
         
         public virtual void ScenarioStart()
@@ -73,11 +70,10 @@ namespace OmadaWebsiteTests.Features
             testRunner.CollectScenarioErrors();
         }
         
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Checking responsiveness of contact form fields")]
-        [NUnit.Framework.CategoryAttribute("website")]
-        [NUnit.Framework.CategoryAttribute("contact_form")]
-        [NUnit.Framework.CategoryAttribute("Browser_Chrome")]
+        [TechTalk.SpecRun.ScenarioAttribute("Checking responsiveness of contact form fields", new string[] {
+                "website",
+                "contact_form",
+                "Browser_Chrome"}, SourceLine=5)]
         public virtual void CheckingResponsivenessOfContactFormFields()
         {
             string[] tagsOfScenario = new string[] {
@@ -147,11 +143,10 @@ this.ScenarioInitialize(scenarioInfo);
             this.ScenarioCleanup();
         }
         
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Checking if jobs offers are accessible through website")]
-        [NUnit.Framework.CategoryAttribute("website")]
-        [NUnit.Framework.CategoryAttribute("job_offers")]
-        [NUnit.Framework.CategoryAttribute("Browser_Chrome")]
+        [TechTalk.SpecRun.ScenarioAttribute("Checking if jobs offers are accessible through website", new string[] {
+                "website",
+                "job_offers",
+                "Browser_Chrome"}, SourceLine=15)]
         public virtual void CheckingIfJobsOffersAreAccessibleThroughWebsite()
         {
             string[] tagsOfScenario = new string[] {
@@ -199,12 +194,11 @@ this.ScenarioInitialize(scenarioInfo);
             this.ScenarioCleanup();
         }
         
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Checking if company address is up to date")]
-        [NUnit.Framework.CategoryAttribute("website")]
-        [NUnit.Framework.CategoryAttribute("company_address")]
-        [NUnit.Framework.CategoryAttribute("Browser_Chrome")]
-        [NUnit.Framework.CategoryAttribute("Browser_Firefox")]
+        [TechTalk.SpecRun.ScenarioAttribute("Checking if company address is up to date", new string[] {
+                "website",
+                "company_address",
+                "Browser_Chrome",
+                "Browser_Firefox"}, SourceLine=23)]
         public virtual void CheckingIfCompanyAddressIsUpToDate()
         {
             string[] tagsOfScenario = new string[] {
@@ -247,11 +241,10 @@ this.ScenarioInitialize(scenarioInfo);
             this.ScenarioCleanup();
         }
         
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Downloading demo file")]
-        [NUnit.Framework.CategoryAttribute("website")]
-        [NUnit.Framework.CategoryAttribute("company_address")]
-        [NUnit.Framework.CategoryAttribute("Browser_Chrome")]
+        [TechTalk.SpecRun.ScenarioAttribute("Downloading demo file", new string[] {
+                "website",
+                "company_address",
+                "Browser_Chrome"}, SourceLine=29)]
         public virtual void DownloadingDemoFile()
         {
             string[] tagsOfScenario = new string[] {

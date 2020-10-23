@@ -221,3 +221,8 @@ C:\Users\Bartek\source\repos\OmadaWebsiteTests\OmadaWebsiteTests\bin\Debug\netco
 C:\Users\Bartek\source\repos\OmadaWebsiteTests\OmadaWebsiteTests\bin\Debug\netcoreapp3.1\StreamJsonRpc.dll
 C:\Users\Bartek\source\repos\OmadaWebsiteTests\OmadaWebsiteTests\bin\Debug\netcoreapp3.1\FSharp.Core.dll
 C:\Users\Bartek\source\repos\OmadaWebsiteTests\OmadaWebsiteTests\obj\Debug\netcoreapp3.1\OmadaWebsiteTests.csproj.CoreCompileInputs.cache
+C:\Users\Bartek\source\repos\OmadaWebsiteTests\OmadaWebsiteTests\bin\Debug\netcoreapp3.1\FluentAssertions.dll
+C:\Users\Bartek\source\repos\OmadaWebsiteTests\OmadaWebsiteTests\bin\Debug\netcoreapp3.1\SpecRun.Runtime.SpecFlowPlugin.dll
+C:\Users\Bartek\source\repos\OmadaWebsiteTests\OmadaWebsiteTests\bin\Debug\netcoreapp3.1\TechTalk.SpecRun.dll
+C:\Users\Bartek\source\repos\OmadaWebsiteTests\OmadaWebsiteTests\bin\Debug\netcoreapp3.1\TechTalk.SpecRun.Common.dll
+C:\Users\Bartek\source\repos\OmadaWebsiteTests\OmadaWebsiteTests\bin\Debug\netcoreapp3.1\Default.srprofile

@@ -735,6 +735,41 @@
           "build/SpecRun.Runner.targets": {}
         }
       },
+      "SpecRun.SpecFlow/3.4.19": {
+        "type": "package",
+        "dependencies": {
+          "SpecRun.SpecFlow.3-4-0": "[3.4.19]"
+        }
+      },
+      "SpecRun.SpecFlow.3-4-0/3.4.19": {
+        "type": "package",
+        "dependencies": {
+          "SpecFlow": "[3.4.3, 3.5.0)",
+          "SpecFlow.Tools.MsBuild.Generation": "[3.4.3, 3.5.0)",
+          "SpecRun.Runner": "3.4.19"
+        },
+        "compile": {
+          "lib/netstandard2.0/SpecRun.Runtime.SpecFlowPlugin.dll": {},
+          "lib/netstandard2.0/TechTalk.SpecRun.Common.dll": {},
+          "lib/netstandard2.0/TechTalk.SpecRun.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SpecRun.Runtime.SpecFlowPlugin.dll": {},
+          "lib/netstandard2.0/TechTalk.SpecRun.Common.dll": {},
+          "lib/netstandard2.0/TechTalk.SpecRun.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/any/_._": {
+            "buildAction": "None",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        },
+        "build": {
+          "build/SpecRun.SpecFlow.3-4-0.props": {},
+          "build/SpecRun.SpecFlow.3-4-0.targets": {}
+        }
+      },
       "System.AppContext/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -3161,6 +3196,90 @@
         "tools/netcoreapp3.1/TechTalk.SpecRun.VisualStudio.TestAdapter.dll",
         "tools/netcoreapp3.1/TechTalk.SpecRun.VisualStudio.TestAdapter.dll.config",
         "tools/netcoreapp3.1/TechTalk.SpecRun.dll"
+      ]
+    },
+    "SpecRun.SpecFlow/3.4.19": {
+      "sha512": "EDg0P/+DxRf5ZbbhRMNf9iwBFI5GWCGvZMX7vXHQBCw0Ui2CaqLpYltoQTziNB/i9jxBNOSfnYYUN9nZfXlbXA==",
+      "type": "package",
+      "path": "specrun.specflow/3.4.19",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "specrun.specflow.3.4.19.nupkg.sha512",
+        "specrun.specflow.nuspec"
+      ]
+    },
+    "SpecRun.SpecFlow.3-4-0/3.4.19": {
+      "sha512": "TEfFDkvaiTjkIPz3sTgB/jrPqomEIcWjaGIDGRU0co7wFg3ANGKqiLfebsb1TwcFiyGg5uu7BcA2kk0M0B2Hbw==",
+      "type": "package",
+      "path": "specrun.specflow.3-4-0/3.4.19",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "build/SpecFlow.Plus.Runner.AssemblyHooks.cs",
+        "build/SpecFlow.Plus.Runner.AssemblyHooks.vb",
+        "build/SpecRun.SpecFlow.3-4-0.props",
+        "build/SpecRun.SpecFlow.3-4-0.targets",
+        "build/net471/SpecRun.Generator.SpecFlowPlugin.dll",
+        "build/net471/SpecRun.Generator.SpecFlowPlugin.pdb",
+        "build/net471/TechTalk.SpecRun.Common.dll",
+        "build/netstandard2.0/BoDi.dll",
+        "build/netstandard2.0/Cucumber.Messages.dll",
+        "build/netstandard2.0/Gherkin.dll",
+        "build/netstandard2.0/Google.Protobuf.dll",
+        "build/netstandard2.0/Newtonsoft.Json.dll",
+        "build/netstandard2.0/SpecRun.Generator.SpecFlowPlugin.deps.json",
+        "build/netstandard2.0/SpecRun.Generator.SpecFlowPlugin.dll",
+        "build/netstandard2.0/SpecRun.Generator.SpecFlowPlugin.pdb",
+        "build/netstandard2.0/SpecRun.Runtime.SpecFlowPlugin.dll",
+        "build/netstandard2.0/System.Buffers.dll",
+        "build/netstandard2.0/System.CodeDom.dll",
+        "build/netstandard2.0/System.Collections.Concurrent.dll",
+        "build/netstandard2.0/System.Configuration.ConfigurationManager.dll",
+        "build/netstandard2.0/System.Diagnostics.DiagnosticSource.dll",
+        "build/netstandard2.0/System.IO.FileSystem.Primitives.dll",
+        "build/netstandard2.0/System.Linq.dll",
+        "build/netstandard2.0/System.Memory.dll",
+        "build/netstandard2.0/System.Numerics.Vectors.dll",
+        "build/netstandard2.0/System.Reflection.Emit.ILGeneration.dll",
+        "build/netstandard2.0/System.Reflection.Emit.Lightweight.dll",
+        "build/netstandard2.0/System.Reflection.Emit.dll",
+        "build/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "build/netstandard2.0/System.Runtime.Numerics.dll",
+        "build/netstandard2.0/System.Security.AccessControl.dll",
+        "build/netstandard2.0/System.Security.Cryptography.OpenSsl.dll",
+        "build/netstandard2.0/System.Security.Cryptography.Primitives.dll",
+        "build/netstandard2.0/System.Security.Cryptography.ProtectedData.dll",
+        "build/netstandard2.0/System.Security.Permissions.dll",
+        "build/netstandard2.0/System.Security.Principal.Windows.dll",
+        "build/netstandard2.0/System.Security.Principal.dll",
+        "build/netstandard2.0/System.Threading.Tasks.Dataflow.dll",
+        "build/netstandard2.0/System.Threading.Tasks.Extensions.dll",
+        "build/netstandard2.0/System.Threading.dll",
+        "build/netstandard2.0/TechTalk.SpecFlow.Generator.dll",
+        "build/netstandard2.0/TechTalk.SpecFlow.Parser.dll",
+        "build/netstandard2.0/TechTalk.SpecFlow.Utils.dll",
+        "build/netstandard2.0/TechTalk.SpecFlow.dll",
+        "build/netstandard2.0/TechTalk.SpecRun.Common.dll",
+        "build/netstandard2.0/TechTalk.SpecRun.dll",
+        "build/netstandard2.0/Utf8Json.dll",
+        "content/SpecRunTestProfile.xsd",
+        "content/SpecRunTestProfile_2011_09.xsd",
+        "content/runtests.cmd.pp",
+        "contentFiles/any/any/SpecRunTestProfile.xsd",
+        "contentFiles/any/any/SpecRunTestProfile_2011_09.xsd",
+        "contentFiles/any/any/runtests.cmd.pp",
+        "lib/net461/SpecRun.Runtime.SpecFlowPlugin.dll",
+        "lib/net461/TechTalk.SpecRun.Common.dll",
+        "lib/net461/TechTalk.SpecRun.dll",
+        "lib/netstandard2.0/SpecRun.Runtime.SpecFlowPlugin.dll",
+        "lib/netstandard2.0/TechTalk.SpecRun.Common.dll",
+        "lib/netstandard2.0/TechTalk.SpecRun.dll",
+        "readme.txt",
+        "specrun.specflow.3-4-0.3.4.19.nupkg.sha512",
+        "specrun.specflow.3-4-0.nuspec"
       ]
     },
     "System.AppContext/4.3.0": {
@@ -6704,7 +6823,7 @@
       "Selenium.WebDriver >= 3.141.0",
       "SpecFlow.Assist.Dynamic >= 1.4.2",
       "SpecFlow.Plus.LivingDocPlugin >= 3.4.242",
-      "SpecRun.Runner >= 3.4.19"
+      "SpecRun.SpecFlow >= 3.4.19"
     ]
   },
   "packageFolders": {
@@ -6781,7 +6900,7 @@
             "target": "Package",
             "version": "[3.4.242, )"
           },
-          "SpecRun.Runner": {
+          "SpecRun.SpecFlow": {
             "target": "Package",
             "version": "[3.4.19, )"
           }

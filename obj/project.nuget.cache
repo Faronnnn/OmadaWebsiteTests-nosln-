@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "T2e3wQPip4Edr2xEOrmYYXd7BfCg4F3wt0Czn1UF5oW4M4AgO1O4dnt5pEBNDvaACQOU4T6k17L6mmDY7hdmtw==",
+  "dgSpecHash": "6hb10zUdg+PmjBX9wZdhJqkhBllcd+BACg0vipavwkn7EA9iYY72SfB5gFhWUzyTlbKzIB/RmvwacCU1WmUSFg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Bartek\\source\\repos\\OmadaWebsiteTests\\OmadaWebsiteTests\\OmadaWebsiteTests.csproj",
   "expectedPackageFiles": [
@@ -46,6 +46,8 @@
     "C:\\Users\\Bartek\\.nuget\\packages\\specflow.plus.livingdocplugin\\3.4.242\\specflow.plus.livingdocplugin.3.4.242.nupkg.sha512",
     "C:\\Users\\Bartek\\.nuget\\packages\\specflow.tools.msbuild.generation\\3.4.3\\specflow.tools.msbuild.generation.3.4.3.nupkg.sha512",
     "C:\\Users\\Bartek\\.nuget\\packages\\specrun.runner\\3.4.19\\specrun.runner.3.4.19.nupkg.sha512",
+    "C:\\Users\\Bartek\\.nuget\\packages\\specrun.specflow\\3.4.19\\specrun.specflow.3.4.19.nupkg.sha512",
+    "C:\\Users\\Bartek\\.nuget\\packages\\specrun.specflow.3-4-0\\3.4.19\\specrun.specflow.3-4-0.3.4.19.nupkg.sha512",
     "C:\\Users\\Bartek\\.nuget\\packages\\system.appcontext\\4.3.0\\system.appcontext.4.3.0.nupkg.sha512",
     "C:\\Users\\Bartek\\.nuget\\packages\\system.buffers\\4.3.0\\system.buffers.4.3.0.nupkg.sha512",
     "C:\\Users\\Bartek\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",

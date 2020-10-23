@@ -6,6 +6,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using TechTalk.SpecFlow;
 
@@ -47,8 +48,10 @@ namespace OmadaWebsiteTests.Hooks
             
             switch (envVariable)
             {
-                case "Chrome": return new ChromeDriver(); //{ Url = SeleniumBaseUrl };
-                case "Firefox": return new FirefoxDriver(); //{ Url = SeleniumBaseUrl };
+                //case "Chrome": return new ChromeDriver(@"C:\Users\Bartek\source\repos\OmadaWebsiteTests\OmadaWebsiteTests\bin\Debug\netcoreapp3.1"); //{ Url = SeleniumBaseUrl };
+                //case "Chrome": return new ChromeDriver(Assembly.GetExecutingAssembly().Location);
+                case "Chrome": return new ChromeDriver(AppDomain.CurrentDomain.BaseDirectory + "../../"); //{ Url = SeleniumBaseUrl };
+                case "Firefox": return new FirefoxDriver(AppDomain.CurrentDomain.BaseDirectory); //{ Url = SeleniumBaseUrl };
                 case string browser: throw new NotSupportedException($"{browser} is not a supported browser");
                 default: throw new NotSupportedException("not supported browser: <null>");
             }
