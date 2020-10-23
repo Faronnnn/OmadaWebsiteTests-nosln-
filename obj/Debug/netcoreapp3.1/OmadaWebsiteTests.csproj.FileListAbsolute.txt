@@ -1,11 +1,6 @@
 C:\Users\Bartek\source\repos\OmadaWebsiteTests\OmadaWebsiteTests\bin\Debug\netcoreapp3.1\testhost.dll
 C:\Users\Bartek\source\repos\OmadaWebsiteTests\OmadaWebsiteTests\bin\Debug\netcoreapp3.1\TechTalk.SpecFlow.NUnit.SpecFlowPlugin.dll
 C:\Users\Bartek\source\repos\OmadaWebsiteTests\OmadaWebsiteTests\bin\Debug\netcoreapp3.1\testhost.exe
-C:\Users\Bartek\source\repos\OmadaWebsiteTests\OmadaWebsiteTests\bin\Debug\netcoreapp3.1\NUnit3.TestAdapter.dll
-C:\Users\Bartek\source\repos\OmadaWebsiteTests\OmadaWebsiteTests\bin\Debug\netcoreapp3.1\NUnit3.TestAdapter.pdb
-C:\Users\Bartek\source\repos\OmadaWebsiteTests\OmadaWebsiteTests\bin\Debug\netcoreapp3.1\nunit.engine.dll
-C:\Users\Bartek\source\repos\OmadaWebsiteTests\OmadaWebsiteTests\bin\Debug\netcoreapp3.1\nunit.engine.api.dll
-C:\Users\Bartek\source\repos\OmadaWebsiteTests\OmadaWebsiteTests\bin\Debug\netcoreapp3.1\nunit.engine.core.dll
 C:\Users\Bartek\source\repos\OmadaWebsiteTests\OmadaWebsiteTests\bin\Debug\netcoreapp3.1\OmadaWebsiteTests.deps.json
 C:\Users\Bartek\source\repos\OmadaWebsiteTests\OmadaWebsiteTests\bin\Debug\netcoreapp3.1\OmadaWebsiteTests.runtimeconfig.json
 C:\Users\Bartek\source\repos\OmadaWebsiteTests\OmadaWebsiteTests\bin\Debug\netcoreapp3.1\OmadaWebsiteTests.runtimeconfig.dev.json
@@ -15,7 +10,6 @@ C:\Users\Bartek\source\repos\OmadaWebsiteTests\OmadaWebsiteTests\bin\Debug\netco
 C:\Users\Bartek\source\repos\OmadaWebsiteTests\OmadaWebsiteTests\bin\Debug\netcoreapp3.1\Gherkin.dll
 C:\Users\Bartek\source\repos\OmadaWebsiteTests\OmadaWebsiteTests\bin\Debug\netcoreapp3.1\Google.Protobuf.dll
 C:\Users\Bartek\source\repos\OmadaWebsiteTests\OmadaWebsiteTests\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.CodeCoverage.Shim.dll
-C:\Users\Bartek\source\repos\OmadaWebsiteTests\OmadaWebsiteTests\bin\Debug\netcoreapp3.1\Microsoft.DotNet.InternalAbstractions.dll
 C:\Users\Bartek\source\repos\OmadaWebsiteTests\OmadaWebsiteTests\bin\Debug\netcoreapp3.1\Microsoft.TestPlatform.CoreUtilities.dll
 C:\Users\Bartek\source\repos\OmadaWebsiteTests\OmadaWebsiteTests\bin\Debug\netcoreapp3.1\Microsoft.TestPlatform.PlatformAbstractions.dll
 C:\Users\Bartek\source\repos\OmadaWebsiteTests\OmadaWebsiteTests\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.TestPlatform.ObjectModel.dll
@@ -32,7 +26,6 @@ C:\Users\Bartek\source\repos\OmadaWebsiteTests\OmadaWebsiteTests\bin\Debug\netco
 C:\Users\Bartek\source\repos\OmadaWebsiteTests\OmadaWebsiteTests\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
 C:\Users\Bartek\source\repos\OmadaWebsiteTests\OmadaWebsiteTests\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Bartek\source\repos\OmadaWebsiteTests\OmadaWebsiteTests\bin\Debug\netcoreapp3.1\System.Security.Permissions.dll
-C:\Users\Bartek\source\repos\OmadaWebsiteTests\OmadaWebsiteTests\bin\Debug\netcoreapp3.1\System.Xml.XPath.XmlDocument.dll
 C:\Users\Bartek\source\repos\OmadaWebsiteTests\OmadaWebsiteTests\bin\Debug\netcoreapp3.1\Utf8Json.dll
 C:\Users\Bartek\source\repos\OmadaWebsiteTests\OmadaWebsiteTests\bin\Debug\netcoreapp3.1\cs\Microsoft.TestPlatform.CoreUtilities.resources.dll
 C:\Users\Bartek\source\repos\OmadaWebsiteTests\OmadaWebsiteTests\bin\Debug\netcoreapp3.1\cs\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll

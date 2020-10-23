@@ -20,7 +20,7 @@ Scenario: Checking if jobs offers are accessible through website
 	And I set 'Warsaw' on city filter on the Career Portal
 	Then I see 'Azure Cloud Automation Ninja' in the results
 
-@Browser_Chrome @Browser_Firefox
+@website @company_address @Browser_Chrome @Browser_Firefox
 Scenario: Checking if company address is up to date
 	Given I am on the main page
 	When I open Contact Omada page from main page

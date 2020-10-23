@@ -201,11 +201,15 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Checking if company address is up to date")]
+        [NUnit.Framework.CategoryAttribute("website")]
+        [NUnit.Framework.CategoryAttribute("company_address")]
         [NUnit.Framework.CategoryAttribute("Browser_Chrome")]
         [NUnit.Framework.CategoryAttribute("Browser_Firefox")]
         public virtual void CheckingIfCompanyAddressIsUpToDate()
         {
             string[] tagsOfScenario = new string[] {
+                    "website",
+                    "company_address",
                     "Browser_Chrome",
                     "Browser_Firefox"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
