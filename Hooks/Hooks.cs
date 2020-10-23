@@ -5,6 +5,7 @@ using OpenQA.Selenium.Firefox;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -33,7 +34,7 @@ namespace OmadaWebsiteTests.Hooks
         [AfterScenario]
         public void AfterScenario()
         {
-            var driver = _objectContainer.Resolve<ChromeDriver>();
+            var driver = _objectContainer.Resolve<IWebDriver>();
             driver?.Dispose();
         }
 
@@ -48,10 +49,8 @@ namespace OmadaWebsiteTests.Hooks
             
             switch (envVariable)
             {
-                //case "Chrome": return new ChromeDriver(@"C:\Users\Bartek\source\repos\OmadaWebsiteTests\OmadaWebsiteTests\bin\Debug\netcoreapp3.1"); //{ Url = SeleniumBaseUrl };
-                //case "Chrome": return new ChromeDriver(Assembly.GetExecutingAssembly().Location);
-                case "Chrome": return new ChromeDriver(AppDomain.CurrentDomain.BaseDirectory + "../../"); //{ Url = SeleniumBaseUrl };
-                case "Firefox": return new FirefoxDriver(AppDomain.CurrentDomain.BaseDirectory); //{ Url = SeleniumBaseUrl };
+                case "Chrome": return new ChromeDriver(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));
+                case "Firefox": return new FirefoxDriver(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)); //{ Url = SeleniumBaseUrl };
                 case string browser: throw new NotSupportedException($"{browser} is not a supported browser");
                 default: throw new NotSupportedException("not supported browser: <null>");
             }
