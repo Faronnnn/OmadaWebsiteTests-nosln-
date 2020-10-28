@@ -243,13 +243,13 @@ this.ScenarioInitialize(scenarioInfo);
         
         [TechTalk.SpecRun.ScenarioAttribute("Downloading demo file", new string[] {
                 "website",
-                "company_address",
+                "file_downloading",
                 "Browser_Chrome"}, SourceLine=29)]
         public virtual void DownloadingDemoFile()
         {
             string[] tagsOfScenario = new string[] {
                     "website",
-                    "company_address",
+                    "file_downloading",
                     "Browser_Chrome"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Downloading demo file", null, tagsOfScenario, argumentsOfScenario);
@@ -284,7 +284,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("I download Solution Sheet", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 34
- testRunner.Then("Soulution Sheet is downloaded correclty", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("\'Omada_Identity_Suite_Overview.pdf\' is downloaded correctly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

@@ -4,6 +4,7 @@ using System.Resources;
 using System.Text;
 using OmadaWebsiteTests.PageObjects.Base;
 using OmadaWebsiteTests.PageObjects.More.Career;
+using OmadaWebsiteTests.PageObjects.More.Resources;
 using OmadaWebsiteTests.PageObjects.Solutions;
 using OmadaWebsiteTests.PageObjects.Solutions.SolutionOverview;
 using OpenQA.Selenium;
@@ -145,9 +146,15 @@ namespace OmadaWebsiteTests.PageObjects.Base
 
                 private By _byOmadaPartnerProgramItem => By.CssSelector("a[class='header__sublink--megamenu'][href='/en-us/more/omada-partner-program']");
 
-                private IWebElement _omadaPartnerProgramItem => _driver.FindElement(By.CssSelector("a[class='header__sublink--megamenu'][href='/en-us/more/omada-partner-program']"));
+                private IWebElement _omadaPartnerProgramItem => _driver.FindElement(_byOmadaPartnerProgramItem);
+                private IWebElement _omadaSuiteSolutionOverviewItem => _driver.FindElement(By.CssSelector("a[class='header__menulink--submenu'][href='/en-us/more/resources/omada-identity-suite-solution-overview']"));
                 private IWebElement _jobsItem => _driver.FindElement(By.CssSelector("a[class='header__menulink--submenu'][href='/en-us/more/career/jobs']"));
 
+                public OmadaIdentitySuiteSolutionOverview OpenOmadaSuiteSolutionOverviewPage()
+                {
+                    _omadaSuiteSolutionOverviewItem.Click();
+                    return new OmadaIdentitySuiteSolutionOverview(_driver);
+                }
                 public JobsPage OpenJobsPage()
                 {
                     _jobsItem.Click();

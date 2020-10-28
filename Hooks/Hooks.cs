@@ -31,6 +31,17 @@ namespace OmadaWebsiteTests.Hooks
             _objectContainer.RegisterInstanceAs<IWebDriver>(webDriver);
         }
 
+        [AfterScenario("file_downloading", Order = 1)]
+        public void CleanupAfterdownloadingfile()
+        {
+            System.IO.DirectoryInfo di = new DirectoryInfo($"{Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)}/downloads");
+
+            foreach (FileInfo file in di.GetFiles())
+            {
+                //file.Delete();
+            }
+        }
+
         [AfterScenario]
         public void AfterScenario()
         {
@@ -43,16 +54,25 @@ namespace OmadaWebsiteTests.Hooks
             var envVariable = Environment.GetEnvironmentVariable("Test_Browser");
             var value = Environment.GetEnvironmentVariable("Test_Browser", EnvironmentVariableTarget.User);
 
+            string filesDowloadPath = $"{Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)}/downloads";
+            //_objectContainer.RegisterInstanceAs<string>(filesDowloadPath);  // simple type couldn't be resolved through context injection.
 
-            IDictionary environmentVariables = Environment.GetEnvironmentVariables();
-
-            
             switch (envVariable)
             {
-                case "Chrome": return new ChromeDriver(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));
-                case "Firefox": return new FirefoxDriver(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)); //{ Url = SeleniumBaseUrl };
-                case string browser: throw new NotSupportedException($"{browser} is not a supported browser");
-                default: throw new NotSupportedException("not supported browser: <null>");
+                case "Chrome":
+                    ChromeOptions chromeOptions = new ChromeOptions();
+                    chromeOptions.AddUserProfilePreference("download.default_directory", filesDowloadPath);
+                    return new ChromeDriver(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), chromeOptions, TimeSpan.FromSeconds(15));
+                case "Firefox":
+                    FirefoxOptions firefoxOptions = new FirefoxOptions();
+                    firefoxOptions.SetPreference("browser.download.folderList", 2);
+                    firefoxOptions.SetPreference("browser.download.dir", filesDowloadPath);
+                    firefoxOptions.SetPreference("browser.helperApps.neverAsk.saveToDisk", "application/pdf");
+                    return new FirefoxDriver(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), firefoxOptions, TimeSpan.FromSeconds(15)); //{ Url = SeleniumBaseUrl };
+                case string browser: 
+                    throw new NotSupportedException($"{browser} is not a supported browser");
+                default: 
+                    throw new NotSupportedException("not supported browser: <null>");
             }
         }
     }

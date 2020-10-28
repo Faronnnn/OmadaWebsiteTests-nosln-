@@ -11,6 +11,10 @@ using TechTalk.SpecFlow.Assist;
 using System.Threading;
 using OmadaWebsiteTests.PageObjects.External;
 using FluentAssertions;
+using System.IO;
+using System.Reflection;
+using OmadaWebsiteTests.PageObjects.More.Resources;
+using OpenQA.Selenium.Support.UI;
 
 namespace OmadaWebsiteTests.Features
 {
@@ -26,10 +30,14 @@ namespace OmadaWebsiteTests.Features
         private ContactPage.ContactForm _contactForm;
         private JobsPage _jobsPage;
         private CandidateManagerPage _careerPortal;
+        private OmadaIdentitySuiteSolutionOverview _omadaIdentitySuiteSolutionOverview;
+        private string _fileDownloadsPath;
 
         public OmadaSiteSteps(IObjectContainer objectContainer)
         {
             _objectContainer = objectContainer;
+            //_fileDownloadsPath = _objectContainer.Resolve<string>();
+            _fileDownloadsPath = $"{Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)}/downloads";
         }
 
         [Given(@"I am on the main page")]
@@ -63,13 +71,13 @@ namespace OmadaWebsiteTests.Features
         public void ThenAllFieldsOfContactFormAreFilled()
         {
             _contactForm.GetFirstNameFieldValue().Should().NotBeNullOrEmpty();
-            //Assert.IsTrue(_contactForm.GetFirstNameFieldValue() != "");
-            //Assert.IsTrue(_contactForm.GetLastNameFieldValue() != "");
-            //Assert.IsTrue(_contactForm.GetCompanyFieldValue() != "");
-            //Assert.IsTrue(_contactForm.GetJobTitleFieldValue() != "");
-            //Assert.IsTrue(_contactForm.GetEmailFieldValue() != "");
-            //Assert.IsTrue(_contactForm.GetPhoneFieldValue() != "");
-            //Assert.IsTrue(_contactForm.GetSubjectFieldValue() != ""); // Subject field doesn't accept values
+            _contactForm.GetFirstNameFieldValue().Should().NotBeNullOrEmpty();
+            _contactForm.GetLastNameFieldValue().Should().NotBeNullOrEmpty();
+            _contactForm.GetCompanyFieldValue().Should().NotBeNullOrEmpty();
+            _contactForm.GetJobTitleFieldValue().Should().NotBeNullOrEmpty();
+            _contactForm.GetEmailFieldValue().Should().NotBeNullOrEmpty();
+            _contactForm.GetPhoneFieldValue().Should().NotBeNullOrEmpty();
+            // _contactForm.GetSubjectFieldValue().Should().NotBeNullOrEmpty(); // Subject field doesn't accept values
         }
 
         [When(@"I open Jobs page from Career section in Main Menu")]
@@ -115,7 +123,21 @@ namespace OmadaWebsiteTests.Features
         [When(@"I Open Omada Identity Suite - Solution Overview from Resuources section in Main Menu")]
         public void WhenIOpenOmadaIdentitySuite_SolutionOverviewFromResuourcesSectionInMainMenu()
         {
-            ScenarioContext.Current.Pending();
+            _omadaIdentitySuiteSolutionOverview = _mainPage.MainMenu().OpenMoreSubmenu().OpenOmadaSuiteSolutionOverviewPage();
+        }
+
+        [When(@"I download Solution Sheet")]
+        public void WhenIDownloadSolutionSheet()
+        {
+            _omadaIdentitySuiteSolutionOverview.DownloadGuide();
+
+        }
+
+        [Then(@"'(.*)' is downloaded correctly")]
+        public void ThenIsDownloadedCorrectly(string fileName)
+        {
+            Helpers.Helpers.CheckIfFileExist(_driver, _fileDownloadsPath, fileName).Should().BeTrue();
+            //ScenarioContext.Current.Pending();
         }
 
 
