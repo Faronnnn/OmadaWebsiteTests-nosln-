@@ -68,8 +68,8 @@ namespace OmadaWebsiteTests.Hooks
                     firefoxOptions.SetPreference("browser.download.folderList", 2);
                     firefoxOptions.SetPreference("browser.download.dir", filesDowloadPath);
                     firefoxOptions.SetPreference("browser.helperApps.neverAsk.saveToDisk", "application/pdf");
-                    firefoxOptions.SetPreference("pdfjs.enabledCache.state", false);
-                    return new FirefoxDriver(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), firefoxOptions, TimeSpan.FromSeconds(15)); //{ Url = SeleniumBaseUrl };
+                    firefoxOptions.SetPreference("pdfjs.enabledCache.state", false); // new line that doesn't change shit
+                    return new FirefoxDriver(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), firefoxOptions, TimeSpan.FromSeconds(15));
                 case string browser: 
                     throw new NotSupportedException($"{browser} is not a supported browser");
                 default: 
