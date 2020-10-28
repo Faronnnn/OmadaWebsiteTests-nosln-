@@ -244,13 +244,15 @@ this.ScenarioInitialize(scenarioInfo);
         [TechTalk.SpecRun.ScenarioAttribute("Downloading demo file", new string[] {
                 "website",
                 "file_downloading",
-                "Browser_Chrome"}, SourceLine=29)]
+                "Browser_Chrome",
+                "Browser_Firefox"}, SourceLine=29)]
         public virtual void DownloadingDemoFile()
         {
             string[] tagsOfScenario = new string[] {
                     "website",
                     "file_downloading",
-                    "Browser_Chrome"};
+                    "Browser_Chrome",
+                    "Browser_Firefox"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Downloading demo file", null, tagsOfScenario, argumentsOfScenario);
 #line 30

@@ -90,7 +90,7 @@ namespace OmadaWebsiteTests.PageObjects.More.Company
 
             public string GetFirstNameFieldValue()
             {
-                return _firstNameField.GetAttribute("Value");
+                return _firstNameField.GetAttribute("value");
             }
 
             public void SetLastNameField(string value)

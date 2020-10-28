@@ -24,7 +24,7 @@ namespace OmadaWebsiteTests.PageObjects.More.Resources
 
         public void DownloadSolutionSheet()
         {
-            _downloadGuideButton.Click();
+            _downloadSolutionSheetButton.Click();
         }
     }
 }

@@ -26,7 +26,7 @@ Scenario: Checking if company address is up to date
 	When I open Contact Omada page from main page
 	Then address of Polish branch is correct
 
-@website @file_downloading @Browser_Chrome
+@website @file_downloading @Browser_Chrome @Browser_Firefox
 Scenario: Downloading demo file
 	Given I am on the main page
 	When I Open Omada Identity Suite - Solution Overview from Resuources section in Main Menu

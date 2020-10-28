@@ -34,11 +34,11 @@ namespace OmadaWebsiteTests.Hooks
         [AfterScenario("file_downloading", Order = 1)]
         public void CleanupAfterdownloadingfile()
         {
-            System.IO.DirectoryInfo di = new DirectoryInfo($"{Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)}/downloads");
+            System.IO.DirectoryInfo di = new DirectoryInfo($"{Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)}/Downloads");
 
             foreach (FileInfo file in di.GetFiles())
             {
-                //file.Delete();
+                file.Delete();
             }
         }
 
@@ -54,7 +54,7 @@ namespace OmadaWebsiteTests.Hooks
             var envVariable = Environment.GetEnvironmentVariable("Test_Browser");
             var value = Environment.GetEnvironmentVariable("Test_Browser", EnvironmentVariableTarget.User);
 
-            string filesDowloadPath = $"{Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)}/downloads";
+            string filesDowloadPath = $"{Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)}\\Downloads";
             //_objectContainer.RegisterInstanceAs<string>(filesDowloadPath);  // simple type couldn't be resolved through context injection.
 
             switch (envVariable)
@@ -68,6 +68,7 @@ namespace OmadaWebsiteTests.Hooks
                     firefoxOptions.SetPreference("browser.download.folderList", 2);
                     firefoxOptions.SetPreference("browser.download.dir", filesDowloadPath);
                     firefoxOptions.SetPreference("browser.helperApps.neverAsk.saveToDisk", "application/pdf");
+                    firefoxOptions.SetPreference("pdfjs.enabledCache.state", false);
                     return new FirefoxDriver(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), firefoxOptions, TimeSpan.FromSeconds(15)); //{ Url = SeleniumBaseUrl };
                 case string browser: 
                     throw new NotSupportedException($"{browser} is not a supported browser");

@@ -37,7 +37,9 @@ namespace OmadaWebsiteTests.Features
         {
             _objectContainer = objectContainer;
             //_fileDownloadsPath = _objectContainer.Resolve<string>();
-            _fileDownloadsPath = $"{Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)}/downloads";
+            _fileDownloadsPath = $"{Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)}\\Downloads";
+            //_fileDownloadsPath = "/Downloads";
+            //_fileDownloadsPath = @"C:\Downloads";
         }
 
         [Given(@"I am on the main page")]
@@ -129,8 +131,7 @@ namespace OmadaWebsiteTests.Features
         [When(@"I download Solution Sheet")]
         public void WhenIDownloadSolutionSheet()
         {
-            _omadaIdentitySuiteSolutionOverview.DownloadGuide();
-
+            _omadaIdentitySuiteSolutionOverview.DownloadSolutionSheet();
         }
 
         [Then(@"'(.*)' is downloaded correctly")]
